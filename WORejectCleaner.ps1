@@ -24,7 +24,7 @@ while ($true) {
                 Start-Sleep -Seconds 1
             }
         }
-        If ($fullname -match 'REJECTED$') {
+        If ($fullname -match '_REJECTED$') {
             Remove-Item -path $fullname -force
             $deleted_timestamp = get-date
             "Removed Rejected file: $fullname at $deleted_timestamp" | Tee-Object $Cleanup -append
